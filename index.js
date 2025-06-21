@@ -24,6 +24,10 @@ app.use('/api/auth', authRoutes);
 
 app.use('/api/user', userRoutes);
 
+app.get("/",(req,res)=>{
+  res.send("Backend is running");
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
